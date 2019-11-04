@@ -1,10 +1,10 @@
 package main.fizzbuzz;
 
 public class FizzBuzzConvertor {
-    private String Buzz = "Buzz";
-    private String Fizz = "Fizz";
+    private static String Buzz = "Buzz";
+    private static String Fizz = "Fizz";
 
-    private Boolean isDivisibleBy(int numerator, int denominator) {
+    private static Boolean isDivisibleBy(int numerator, int denominator) {
         return numerator % denominator == 0;
     }
 
@@ -20,11 +20,11 @@ public class FizzBuzzConvertor {
         }
 
         if (isDivisibleBy(toConvertFizzBuzz, 5)) {
-            return this.Buzz;
+            return Buzz;
         }
 
         if (isDivisibleBy(toConvertFizzBuzz, 3)) {
-            return this.Fizz;
+            return Fizz;
         }
 
 		return String.valueOf(toConvertFizzBuzz);
